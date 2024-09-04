@@ -1,11 +1,12 @@
 import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { Link, type DocumentHead } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
     <div class="h-screen bg-amber-100">
       <div class="container mx-auto text-center">
-        這裡是小圈圈大神廟
+        <p>這裡是小圈圈大神廟</p>
+        <Link href="/introduction">下一步</Link>
       </div>
     </div>
   );

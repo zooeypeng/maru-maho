@@ -3,9 +3,10 @@ import { Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
-    <div>
-      <p>the order has sent, then get your package now.</p>
-      <Link href="/result">下一步</Link>
-    </div>
+    <>
+      <p>你的需求已經送出</p>
+
+      <Link href="/result">請給我，我需要的指引</Link>
+    </>
   );
 });

@@ -1,5 +1,5 @@
 import { component$, Slot } from "@builder.io/qwik";
-import type { RequestHandler } from "@builder.io/qwik-city";
+import type { RequestHandler, DocumentHead } from "@builder.io/qwik-city";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -13,5 +13,22 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 };
 
 export default component$(() => {
-  return <Slot />;
+  return (
+    <div>
+      <div class="container mx-auto text-center">
+        <Slot />
+      </div>
+    </div>
+  );
 });
+
+
+export const head: DocumentHead = {
+  title: "小圈圈大魔法 is typing...",
+  meta: [
+    {
+      name: "MaruMahō",
+      content: "まるまほう",
+    },
+  ],
+};

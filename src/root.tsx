@@ -27,9 +27,19 @@ export default component$(() => {
             href={`${import.meta.env.BASE_URL}manifest.json`}
           />
         )}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC:wght@300;400;700&family=Maven+Pro:wght@400..900&display=swap"
+          rel="stylesheet"
+        />
         <RouterHead />
       </head>
-      <body lang="en">
+      <body lang="zh-TW" class="font-mono-tc">
         <RouterOutlet />
         {!isDev && <ServiceWorkerRegister />}
       </body>

@@ -1,5 +1,6 @@
 import { component$, Slot } from "@builder.io/qwik";
 import type { RequestHandler, DocumentHead } from "@builder.io/qwik-city";
+import Footer from "~/components/footer";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -14,14 +15,16 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
 
 export default component$(() => {
   return (
-    <div>
-      <div class="container mx-auto text-center">
-        <Slot />
+    <div class="h-[100dvh] w-screen bg-indigo-50">
+      <div class="mx-auto flex h-full max-w-[660px] flex-col bg-white text-center">
+        <div class="flex-grow">
+          <Slot />
+        </div>
+        <Footer />
       </div>
     </div>
   );
 });
-
 
 export const head: DocumentHead = {
   title: "小圈圈大魔法 is typing...",
